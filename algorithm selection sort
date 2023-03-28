@@ -1,0 +1,38 @@
+// importing required libraries
+import java.util.Arrays;
+
+// Main class
+public class Main{
+    // main method
+    public static void main(String[] args){
+        
+        //Array Declaration
+        int[] arr = {12,56,34,78,98,54,33};
+        
+        //printing array to check reference
+        System.out.println(Arrays.toString(arr));
+        
+        // selection Sort Algorithm
+        
+        // Index traversal
+        for(int i=0; i<arr.length-1; i++){
+            
+            // value comparison
+            int min = arr[i];
+            for(int j=i; j<arr.length-1; j++){
+                if(arr[j]<min){
+                    min = arr[j];
+                    
+                    //swap
+                    arr[j]=arr[i];
+                    arr[i]=min;
+                    
+                }
+            }
+        }
+        
+        // printing array to check algoriyhm
+     System.out.println(Arrays.toString(arr));
+    
+    }
+}
